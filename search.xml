@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>从零开始的爬虫【1】</title>
+    <url>/2021/04/13/webcrawler-0/</url>
+    <content><![CDATA[<p>本篇主要介绍的内容为，技术学习路线，优秀教程等</p>
+<span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="技术学习路线"><a href="#技术学习路线" class="headerlink" title="技术学习路线"></a>技术学习路线</h2><h2 id="优秀教程"><a href="#优秀教程" class="headerlink" title="优秀教程"></a>优秀教程</h2><h3 id="网课类"><a href="#网课类" class="headerlink" title="网课类"></a>网课类</h3><p>1.<a href="https://www.bilibili.com/video/BV12E411A7ZQ">Python爬虫基础5天速成（2021全新合集）Python入门+数据可视化</a></p>
+<blockquote>
+<p>成都工业大学李巍老师在疫情期间录制的，面向求职的爬虫教程，用request，bs4，re等库完成的，以豆瓣top250为例子的网课类教程；</p>
+</blockquote>
+<h3 id="教程类"><a href="#教程类" class="headerlink" title="教程类"></a>教程类</h3><h3 id="项目类"><a href="#项目类" class="headerlink" title="项目类"></a>项目类</h3><p>1.<a href="https://github.com/facert/awesome-spider">总和类项目，awesome-spyder</a></p>
+<blockquote>
+<p> 这个项目按照拼音引索对收集到的爬虫进行了归类整理，是较为优秀的项目集合，有些项目在爬虫之后甚至做了前端应用来实现数据可视化；</p>
+</blockquote>
+<p>2.爬取豆瓣部分</p>
+<blockquote>
+<p>豆瓣是静态网页，是最容易爬的类型，也是大家练手最常选择的项目之一，因而该项目有大量的案例，很难分析出有意思的东西，属于拿来练手的项目</p>
+</blockquote>
 ]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>教程</tag>
+      </tags>
   </entry>
 </search>
