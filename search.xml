@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>自学爬虫项目</title>
+    <url>/2021/04/12/crawler-init/</url>
+    <content><![CDATA[<h1 id="方尖碑历史博物馆项目可行性研究报告"><a href="#方尖碑历史博物馆项目可行性研究报告" class="headerlink" title="方尖碑历史博物馆项目可行性研究报告"></a>方尖碑历史博物馆项目可行性研究报告</h1><span id="more"></span>
+
+<h2 id="写在前面-amp-必要性"><a href="#写在前面-amp-必要性" class="headerlink" title="写在前面&amp;必要性"></a>写在前面&amp;必要性</h2><p>​    有些话人们常说，喜欢的事儿和擅长的事儿是两码事，若能够靠喜欢且擅长的事儿谋生当属人生中的一大幸事儿，我的研究生导师当属这样的人，喜欢写论文，擅长写论文，无时无刻在写论文，而且通过写论文在学术圈获得了一定的成就和地位；</p>
+<p>​    我是发自内心的敬佩这种人的，近乎自负的自信，超高的工作效率，层出不穷的新点子，每时每刻都沉浸在心流状态中，也导致了我研究生阶段悲剧的开始，进入了我不熟悉的领域，成了一名从来没有考虑过在会计类行业就业的会计专业研究生；</p>
+<p>​    而我自认为是没有办法达到他这种程度的，出身于西电，务实的作风和近乎病态的技术崇拜已经成为我抹不去特征，要我做这类我看来不会有任何贡献，内卷化的推手的工作，我是发自内心的厌恶与厌倦，在持续了半个学期的科研尝试后，我近乎狼狈的逃离了这个地方，圣洁又肮脏的地方，去寻求自救，逃离会计，逃离商科；</p>
+<p>​    我尝试过很多，报过白熊的VIP课程，报过腾讯的未来空间站计划，在我奇奇怪怪的技能栈以及相关经历的缺乏的加持下，毫无悬念的落选了，腾讯的HR在这方面真的做的特别好，完全照顾了每个前来报名的应试者的体验，可最让我在意的，无疑还是那句您在游戏行业的浸润度不够；</p>
+<p>​    这件事情也成了我完全反思自己技能栈的源头之一，我想去哪儿，我的竞争力又在哪儿，于是我又找回了我原来想要尝试的部分，并想要尝试重启自己的blog，也因此写下了这个奇奇怪怪的，充满中二气息的标题，总结自己的求职尝试和努力部分，并作为自己作品的暂存部分，这类文章也就由此而生；</p>
+<p>​    感谢这些可能没人会看的废话，是这些废话激励着我前进，愿正在写这篇随笔和记录的我，以及正在看的你万事胜意，永远年轻，永远在路上；</p>
+<blockquote>
+<p>本处使用过的markdown语法只有两个要点，目录[TOC]，以及大标题# 一级大标题 ## 二级大标题等。。。。</p>
+</blockquote>
+<p>​    原有的项目为junbofans.github.io，上次更新为2年前，因此现在有将其重启的打算</p>
+<h2 id="项目验收标准："><a href="#项目验收标准：" class="headerlink" title="项目验收标准："></a>项目验收标准：</h2><p>1.作为面试前的标准</p>
+<p>2.做实际项目的时候会想起这个项目的类似经验，回头在该项目中寻找，更新解决方案</p>
+<h2 id="项目包含内容："><a href="#项目包含内容：" class="headerlink" title="项目包含内容："></a>项目包含内容：</h2><p>​    该项目作为产，运，数分的求职准备记录，至少该包含的内容应有：</p>
+<p>​    1.产品相关教程贴</p>
+<p>​    2.运营相关教程贴</p>
+<p>​    3.数分相关教程贴</p>
+<p>​    4.作品集</p>
+<p>​    5.面经，求职经验</p>
+<p>​    6.随笔【未完成的作品集，或者说开的坑】</p>
+<p>​    7.blog运维</p>
+<p>​    8.and so on</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>立项文件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始的爬虫【1】</title>
     <url>/2021/04/13/webcrawler-0/</url>
     <content><![CDATA[<p>本篇主要介绍的内容为，技术学习路线，优秀教程等</p>
@@ -19,6 +54,47 @@
 <p>豆瓣是静态网页，是最容易爬的类型，也是大家练手最常选择的项目之一，因而该项目有大量的案例，很难分析出有意思的东西，属于拿来练手的项目</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始的爬虫【2】</title>
+    <url>/2021/04/13/webcrawler-1/</url>
+    <content><![CDATA[<p>​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；</p>
+<span id="more"></span>
+
+<p>​    这期是打算从豆瓣top250开始尝试，爬豆瓣top250高分电影，这类题目好像在网易游戏的题目中出现过，还是存在一些玩的必要性的，由于豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始；该项目基本思路跟随从0开始的爬虫【1】中，b站视频部分；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br></pre></td></tr></table></figure>
+
+<p>​    该部分代表整个程序的运行顺序，程序将从这个这行开始向下运行，用来简化阅读理解的流程；</p>
+<p>​    从整个函数的运行逻辑上来看，爬虫的通用逻辑大致可以分为</p>
+<ol>
+<li>对网页发送请求，网站返回数据包（使用request等库）</li>
+<li>对数据包进行解析（使用Beautiful Soup等库）</li>
+<li>对解析出的数据进行拆包，找出自己需要的数据（使用re正则表达式）</li>
+<li>对自己爬出的数据存储进行存储（存进xlsx，或者自建data base）</li>
+</ol>
+<h2 id="对网页发送请求："><a href="#对网页发送请求：" class="headerlink" title="对网页发送请求："></a>对网页发送请求：</h2><p>​    在对网页发送请求时，最常用的库为request库，该库作为项目中第一个介绍的工具形项目，未来是否会有使用工具上的更新暂时还不清楚，属于和大家一起学习探索的过程；</p>
+<img src="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png" alt="requests-sidebar.png (1020×1308)" style="zoom: 33%;" />
+
+<blockquote>
+<p>Requests 唯一的一个<strong>非转基因</strong>的 Python HTTP 库，人类可以安全享用。</p>
+<p><strong>警告</strong>：非专业使用其他 HTTP 库会导致危险的副作用，包括：安全缺陷症、冗余代码症、重新发明轮子症、啃文档症、抑郁、头疼、甚至死亡。</p>
+</blockquote>
+<p>​    在最初的项目中并不需要接触太深的request库的内容，将会根据项目，或者实操中遇到的问题回头介绍，先从每个爬虫流程的第一步，发送请求开始介绍吧；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>得到的结果是：&lt;Response [418]&gt;，一个叫做418的返回对象，对象的类型是Response对象；</p>
+<p>【418】我是个茶壶，我煮不了咖啡，是你被豆瓣网识别出来是爬虫程序，被拦截了，需要做一定的更改；</p>
+<p>对于豆瓣的爬取策略，最简单的方式是封装一个header头文件，告诉豆瓣你是正常的浏览器</p>
+</blockquote>
+<h2 id="包装头文件"><a href="#包装头文件" class="headerlink" title="包装头文件"></a>包装头文件</h2>]]></content>
       <categories>
         <category>爬虫</category>
       </categories>

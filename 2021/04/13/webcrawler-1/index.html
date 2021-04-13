@@ -20,29 +20,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;junbofans.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Mist&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
-<meta name="description" content="本篇主要介绍的内容为，技术学习路线，优秀教程等">
+<meta name="description" content="​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始的爬虫【1】">
-<meta property="og:url" content="http://junbofans.github.io/2021/04/13/webcrawler-0/index.html">
+<meta property="og:title" content="从零开始的爬虫【2】">
+<meta property="og:url" content="http://junbofans.github.io/2021/04/13/webcrawler-1/index.html">
 <meta property="og:site_name" content="方尖碑的历史博物馆">
-<meta property="og:description" content="本篇主要介绍的内容为，技术学习路线，优秀教程等">
+<meta property="og:description" content="​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-13T13:22:59.000Z">
-<meta property="article:modified_time" content="2021-04-13T14:37:39.600Z">
+<meta property="og:image" content="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png">
+<meta property="article:published_time" content="2021-04-13T14:28:00.000Z">
+<meta property="article:modified_time" content="2021-04-13T14:37:38.843Z">
 <meta property="article:author" content="方尖碑">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png">
 
 
-<link rel="canonical" href="http://junbofans.github.io/2021/04/13/webcrawler-0/">
+<link rel="canonical" href="http://junbofans.github.io/2021/04/13/webcrawler-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;junbofans.github.io&#x2F;2021&#x2F;04&#x2F;13&#x2F;webcrawler-0&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;13&#x2F;webcrawler-0&#x2F;&quot;,&quot;title&quot;:&quot;从零开始的爬虫【1】&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;junbofans.github.io&#x2F;2021&#x2F;04&#x2F;13&#x2F;webcrawler-1&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;13&#x2F;webcrawler-1&#x2F;&quot;,&quot;title&quot;:&quot;从零开始的爬虫【2】&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>从零开始的爬虫【1】 | 方尖碑的历史博物馆</title><script src="/js/config.js"></script>
+<title>从零开始的爬虫【2】 | 方尖碑的历史博物馆</title><script src="/js/config.js"></script>
   
 
 
@@ -150,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF"><span class="nav-number">1.</span> <span class="nav-text">技术学习路线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%A7%80%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">优秀教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E8%AF%BE%E7%B1%BB"><span class="nav-number">2.1.</span> <span class="nav-text">网课类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">教程类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%B1%BB"><span class="nav-number">2.3.</span> <span class="nav-text">项目类</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%BD%91%E9%A1%B5%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对网页发送请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">包装头文件</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -216,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://junbofans.github.io/2021/04/13/webcrawler-0/">
+    <link itemprop="mainEntityOfPage" href="http://junbofans.github.io/2021/04/13/webcrawler-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -229,7 +231,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          从零开始的爬虫【1】
+          从零开始的爬虫【2】
         </h1>
 
         <div class="post-meta-container">
@@ -241,7 +243,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-04-13 21:22:59 / 修改时间：22:37:39" itemprop="dateCreated datePublished" datetime="2021-04-13T21:22:59+08:00">2021-04-13</time>
+      <time title="创建时间：2021-04-13 22:28:00 / 修改时间：22:37:38" itemprop="dateCreated datePublished" datetime="2021-04-13T22:28:00+08:00">2021-04-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,7 +263,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>309</span>
+      <span>959</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -279,22 +281,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本篇主要介绍的内容为，技术学习路线，优秀教程等</p>
+        <p>​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；</p>
 <span id="more"></span>
 
-<h2 id="技术学习路线"><a href="#技术学习路线" class="headerlink" title="技术学习路线"></a>技术学习路线</h2><h2 id="优秀教程"><a href="#优秀教程" class="headerlink" title="优秀教程"></a>优秀教程</h2><h3 id="网课类"><a href="#网课类" class="headerlink" title="网课类"></a>网课类</h3><p>1.<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12E411A7ZQ">Python爬虫基础5天速成（2021全新合集）Python入门+数据可视化</a></p>
-<blockquote>
-<p>成都工业大学李巍老师在疫情期间录制的，面向求职的爬虫教程，用request，bs4，re等库完成的，以豆瓣top250为例子的网课类教程；</p>
-</blockquote>
-<h3 id="教程类"><a href="#教程类" class="headerlink" title="教程类"></a>教程类</h3><h3 id="项目类"><a href="#项目类" class="headerlink" title="项目类"></a>项目类</h3><p>1.<a target="_blank" rel="noopener" href="https://github.com/facert/awesome-spider">总和类项目，awesome-spyder</a></p>
-<blockquote>
-<p> 这个项目按照拼音引索对收集到的爬虫进行了归类整理，是较为优秀的项目集合，有些项目在爬虫之后甚至做了前端应用来实现数据可视化；</p>
-</blockquote>
-<p>2.爬取豆瓣部分</p>
-<blockquote>
-<p>豆瓣是静态网页，是最容易爬的类型，也是大家练手最常选择的项目之一，因而该项目有大量的案例，很难分析出有意思的东西，属于拿来练手的项目</p>
-</blockquote>
+<p>​    这期是打算从豆瓣top250开始尝试，爬豆瓣top250高分电影，这类题目好像在网易游戏的题目中出现过，还是存在一些玩的必要性的，由于豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始；该项目基本思路跟随从0开始的爬虫【1】中，b站视频部分；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br></pre></td></tr></table></figure>
 
+<p>​    该部分代表整个程序的运行顺序，程序将从这个这行开始向下运行，用来简化阅读理解的流程；</p>
+<p>​    从整个函数的运行逻辑上来看，爬虫的通用逻辑大致可以分为</p>
+<ol>
+<li>对网页发送请求，网站返回数据包（使用request等库）</li>
+<li>对数据包进行解析（使用Beautiful Soup等库）</li>
+<li>对解析出的数据进行拆包，找出自己需要的数据（使用re正则表达式）</li>
+<li>对自己爬出的数据存储进行存储（存进xlsx，或者自建data base）</li>
+</ol>
+<h2 id="对网页发送请求："><a href="#对网页发送请求：" class="headerlink" title="对网页发送请求："></a>对网页发送请求：</h2><p>​    在对网页发送请求时，最常用的库为request库，该库作为项目中第一个介绍的工具形项目，未来是否会有使用工具上的更新暂时还不清楚，属于和大家一起学习探索的过程；</p>
+<img src="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png" alt="requests-sidebar.png (1020×1308)" style="zoom: 33%;" />
+
+<blockquote>
+<p>Requests 唯一的一个<strong>非转基因</strong>的 Python HTTP 库，人类可以安全享用。</p>
+<p><strong>警告</strong>：非专业使用其他 HTTP 库会导致危险的副作用，包括：安全缺陷症、冗余代码症、重新发明轮子症、啃文档症、抑郁、头疼、甚至死亡。</p>
+</blockquote>
+<p>​    在最初的项目中并不需要接触太深的request库的内容，将会根据项目，或者实操中遇到的问题回头介绍，先从每个爬虫流程的第一步，发送请求开始介绍吧；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>得到的结果是：&lt;Response [418]&gt;，一个叫做418的返回对象，对象的类型是Response对象；</p>
+<p>【418】我是个茶壶，我煮不了咖啡，是你被豆瓣网识别出来是爬虫程序，被拦截了，需要做一定的更改；</p>
+<p>对于豆瓣的爬取策略，最简单的方式是封装一个header头文件，告诉豆瓣你是正常的浏览器</p>
+</blockquote>
+<h2 id="包装头文件"><a href="#包装头文件" class="headerlink" title="包装头文件"></a>包装头文件</h2>
     </div>
 
     
@@ -328,14 +344,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/12/crawler-init/" rel="prev" title="自学爬虫项目">
-                  <i class="fa fa-chevron-left"></i> 自学爬虫项目
+                <a href="/2021/04/13/webcrawler-0/" rel="prev" title="从零开始的爬虫【1】">
+                  <i class="fa fa-chevron-left"></i> 从零开始的爬虫【1】
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/13/webcrawler-1/" rel="next" title="从零开始的爬虫【2】">
-                  从零开始的爬虫【2】 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
