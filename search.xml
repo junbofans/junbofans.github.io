@@ -129,7 +129,30 @@
 
 </blockquote>
 <p>​    从上述文件的格式来看属于较为明显的html格式文件，而我们使用r.text将其打开，展现在我们面前的这部分则类似与一个文本文档，可以直接使用正则表达式的方法对内部所需内容进行提取，当然html格式的文件自带的，标准且严格的格式是否能够让我们通过标签进行检索，不用建立新的正则表达式呢？答案是肯定的，因此我们需要引入一个全新且好用的库，bs4（靓汤？；</p>
-<h2 id="简化查询"><a href="#简化查询" class="headerlink" title="简化查询"></a>简化查询</h2>]]></content>
+<h2 id="简化查询"><a href="#简化查询" class="headerlink" title="简化查询"></a>简化查询</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(r.text,<span class="string">&quot;html.parser&quot;</span>) <span class="comment"># html格式的内容 或者是text格式的内容</span></span><br></pre></td></tr></table></figure>
+
+<p>​    由此我们便生成了一个BS4对象，便于我们查找，该BS4对象可以看作一个嵌套的键值对；例如键为</li>而值则为子一级的html格式文档，在这个子一级的html格式文档之中，键为<div class="item">等，值则为更子一级的html格式文档，（或者链表的解释会更好？）</p>
+<p><img src="C:\Users\yubari\AppData\Roaming\Typora\typora-user-images\image-20210415110204965.png" alt="image-20210415110204965"></p>
+<p>​    在构筑了靓汤对象之后，下一步就是提取对象中的内容，保存在数据库中了，而整个bs4对象中我们所需的内容总是有限的，首先就可以限制在红框内的内容；除此之外，也并不是所有的红框内的内容都是需要，我们选中一个单对象来看看里面到底有多少内容：</p>
+<p><img src="C:\Users\yubari\AppData\Roaming\Typora\typora-user-images\image-20210415111059871.png" alt="image-20210415111059871"></p>
+<p>​    而我们需要的内容相比之下，并不会有那么多div，li，span之类，也不需要希望让人自由这类短评价；在下一步我们就需要将所需内容提取出来，使用正则匹配或者靓汤自带方法来提取所需内容；</p>
+<p><img src="C:\Users\yubari\AppData\Roaming\Typora\typora-user-images\image-20210415140033582.png" alt="image-20210415140033582"></p>
+<p>​    <del>导演，主演，cast等可能并不会分析出什么有价值的内容，故本阶段主要以上述红线部分的内容为主建立db，片名，年份，国别，类型，人数，分数六种来建立数据库，英文名无所谓了，还是以最被熟知的中文名为索引建立数据库。</del></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pre = soup.find_all(class_ = <span class="string">&quot;item&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">name = pre.find_all(class_ = <span class="string">&quot;title&quot;</span>)[<span class="number">0</span>].text</span><br></pre></td></tr></table></figure>
+
+<p>​    为了便于后续操作，先将第一个对象(特点是有一个<div class = "item">标签)提取出来，再从该标签中提取出片名（片名的特点是有<div class = "title">标签），之后再将该标签内的第一个text保存就获取了片名；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_star</span>(<span class="params">soup,j</span>):</span></span><br><span class="line">    pre = soup.find_all(class_ = <span class="string">&quot;item&quot;</span>)[j]</span><br><span class="line">    findtext = pre.find_all(class_ = <span class="string">&quot;star&quot;</span>)[<span class="number">0</span>].text</span><br><span class="line">    people = [x <span class="keyword">for</span> x <span class="keyword">in</span> findtext.splitlines() <span class="keyword">if</span> x!=<span class="string">&quot;&quot;</span>]</span><br><span class="line">    <span class="keyword">return</span> people</span><br></pre></td></tr></table></figure>
+
+<p>​    在获取影片的评分内容的时候，尝试了直接对tag提取内容，结果是可以将所有的text内容全部获取，对于没有内容的部分貌似会产生一个/n换行符，或者本身就有一个换行符存在，因而使用了str类型自带的splitlines()方法将内容转换为列表，并再对列表遍历排除空元素获得了最终的结果，分数，和评价人数；到此我们就已经得到了三个数据，片名，分数，和评价人数，剩下年份，类型，国三个数据需要查询；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_type</span>(<span class="params">soup,j</span>):</span></span><br><span class="line">    pre = soup.find_all(class_ = <span class="string">&quot;item&quot;</span>)[j]</span><br><span class="line">    g_type = pre.find_all(class_ = <span class="string">&quot;bd&quot;</span>)[<span class="number">0</span>].text.split()</span><br><span class="line">    <span class="keyword">return</span> g_type</span><br><span class="line"></span><br><span class="line">soup = get_page(<span class="number">0</span>);</span><br><span class="line"><span class="built_in">print</span>(get_type(soup,<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+
+<p>​    当继续使用之前get_star的方法来寻找内容的时候，得出了还算有些意思的结果；</p>
+<blockquote>
+<p>[‘导演:’, ‘弗兰克·德拉邦特’, ‘Frank’, ‘Darabont’, ‘主演:’, ‘蒂姆·罗宾斯’, ‘Tim’, ‘Robbins’, ‘/…’, ‘1994’, ‘/‘, ‘美国’, ‘/‘, ‘犯罪’, ‘剧情’, ‘9.7’, ‘2329719人评价’, ‘希望让人自由。’]</p>
+<p>上述结果中看上去是所有的内容都存在，然而，对这部分内容的分割活动会由于部分内容的缺失，例如最后的评语也不是每一个item都有的，分割方法即不能使用位置定位，也不能用/定位；可以考虑使用其他的方法，例如使用正则表达式；</p>
+</blockquote>
+<p><img src="C:\Users\yubari\AppData\Roaming\Typora\typora-user-images\image-20210415173713266.png" alt="image-20210415173713266"></p>
+]]></content>
       <categories>
         <category>爬虫</category>
       </categories>
