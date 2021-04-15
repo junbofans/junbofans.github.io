@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png">
 <meta property="article:published_time" content="2021-04-13T14:28:00.000Z">
-<meta property="article:modified_time" content="2021-04-15T01:59:17.789Z">
+<meta property="article:modified_time" content="2021-04-15T02:23:57.217Z">
 <meta property="article:author" content="方尖碑">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="教程">
@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%BD%91%E9%A1%B5%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对网页发送请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">包装头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">3.</span> <span class="nav-text">定制请求头</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%BD%91%E9%A1%B5%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对网页发送请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">包装头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">3.</span> <span class="nav-text">定制请求头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9"><span class="nav-number">4.</span> <span class="nav-text">响应内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8C%96%E6%9F%A5%E8%AF%A2"><span class="nav-number">5.</span> <span class="nav-text">简化查询</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -249,7 +249,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-15 09:59:17" itemprop="dateModified" datetime="2021-04-15T09:59:17+08:00">2021-04-15</time>
+        <time title="修改时间：2021-04-15 10:23:57" itemprop="dateModified" datetime="2021-04-15T10:23:57+08:00">2021-04-15</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,14 +269,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>4.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -326,12 +326,25 @@
 <h2 id="包装头文件"><a href="#包装头文件" class="headerlink" title="包装头文件"></a>包装头文件</h2><blockquote>
 <h2 id="定制请求头"><a href="#定制请求头" class="headerlink" title="定制请求头"></a>定制请求头</h2><p>如果你想为请求添加 HTTP 头部，只要简单地传递一个 <code>dict</code> 给 <code>headers</code> 参数就可以了。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">baseurl = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line"><span class="comment"># 豆瓣作为较为简单的反爬机制，设置的应该是之检查了user agent这一个参数，伪装该参数使用的格式见为</span></span><br><span class="line"><span class="comment"># headers = &#123;&quot;user-agent&quot;:&quot;....内容&quot;&#125;</span></span><br><span class="line">headers = &#123;<span class="string">&quot;user-agent&quot;</span>:<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.76&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 以上agent中的内容来源于浏览器，f12，刷新，header参数，user-agent部分；</span></span><br><span class="line">r = requests.get(baseurl,headers = headers)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br><span class="line"><span class="built_in">print</span>(r.headers)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">baseurl = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line"><span class="comment"># 豆瓣作为较为简单的反爬机制，设置的应该是之检查了user agent这一个参数，伪装该参数使用的格式见为</span></span><br><span class="line"><span class="comment"># headers = &#123;&quot;user-agent&quot;:&quot;....内容&quot;&#125;</span></span><br><span class="line">headers = &#123;<span class="string">&quot;user-agent&quot;</span>:<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.76&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 以上agent中的内容来源于浏览器，f12，刷新，header参数，user-agent部分；</span></span><br><span class="line">r = requests.get(baseurl,headers = headers)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br><span class="line"><span class="comment"># 直接打印r的话会获得一个&lt;class &#x27;requests.models.Response&#x27;&gt;对象</span></span><br><span class="line"><span class="built_in">print</span>(r.headers)</span><br><span class="line"><span class="comment"># 打印r.headers以及r.text 则可以获得其中的头文件部分，以及内容部分；</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>此时得到的状态参数为&lt;200&gt;，该状态码的意思是成功处理了请求，伪装头文件之后，可以发现豆瓣不再拦截我们的访问请求，说自己是个茶壶了，对于我们得到的 &lt;class ‘requests.models.Response’&gt; 对象，我们下一步该做的就是响应其内容了；</p>
 </blockquote>
+<h2 id="响应内容"><a href="#响应内容" class="headerlink" title="响应内容"></a>响应内容</h2><blockquote>
+<p>Requests 会自动解码来自服务器的内容。大多数 unicode 字符集都能被无缝地解码。</p>
+<p>请求发出后，Requests 会基于 HTTP 头部对响应的编码作出有根据的推测。<strong>当你访问 <code>r.text</code> 之时，Requests 会使用其推测的文本编码(这还不够酷吗）</strong>。你可以找出 Requests 使用了什么编码，并且能够使用 <code>r.encoding</code> 属性来改变它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;&gt; r.encoding</span><br><span class="line">&gt;<span class="string">&quot;utf-8&quot;</span></span><br><span class="line">&gt;&gt;&gt;&gt; r.encoding = <span class="string">&quot;ISO-8859-1&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>​    但一旦改变了r的encoding属性，之后对r.text的访问就不会再自动推测编码了，而是使用你设定好的r.encoding的编码；</p>
+</blockquote>
+<p>​    打印一下获取到的响应的内容，截取获得一小部分如下所示：(输出空间有限，导致没有办法做到很完美的截取，所以只作为实例展示)：</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pic&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">em</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://movie.douban.com/subject/3541415/&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">&quot;100&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;盗梦空间&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2616355133.jpg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hd&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://movie.douban.com/subject/3541415/&quot;</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span>盗梦空间<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>Inception<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;other&quot;</span>&gt;</span><span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>潜行凶间(港)  /  全面启动(台)<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;playable&quot;</span>&gt;</span>[可播放]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bd&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">                    导演: 克里斯托弗·诺兰 Christopher Nolan<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>主演: 莱昂纳多·迪卡普里奥 Le...<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">                    2010<span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>美国 英国<span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>剧情 科幻 悬疑 冒险</span><br><span class="line">                <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;star&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;rating45-t&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;rating_num&quot;</span> <span class="attr">property</span>=<span class="string">&quot;v:average&quot;</span>&gt;</span>9.3<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">&quot;v:best&quot;</span> <span class="attr">content</span>=<span class="string">&quot;10.0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span>&gt;</span>1695611人评价<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;quote&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;inq&quot;</span>&gt;</span>诺兰给了我们一场无法盗取的梦。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>​    从上述文件的格式来看属于较为明显的html格式文件，而我们使用r.text将其打开，展现在我们面前的这部分则类似与一个文本文档，可以直接使用正则表达式的方法对内部所需内容进行提取，当然html格式的文件自带的，标准且严格的格式是否能够让我们通过标签进行检索，不用建立新的正则表达式呢？答案是肯定的，因此我们需要引入一个全新且好用的库，bs4（靓汤？；</p>
+<h2 id="简化查询"><a href="#简化查询" class="headerlink" title="简化查询"></a>简化查询</h2>
     </div>
 
     
@@ -401,13 +414,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">5k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">5 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动

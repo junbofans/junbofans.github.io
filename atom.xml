@@ -6,7 +6,7 @@
   <link href="http://junbofans.github.io/atom.xml" rel="self"/>
   
   <link href="http://junbofans.github.io/"/>
-  <updated>2021-04-15T01:59:17.789Z</updated>
+  <updated>2021-04-15T02:23:57.217Z</updated>
   <id>http://junbofans.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://junbofans.github.io/2021/04/13/webcrawler-1/"/>
     <id>http://junbofans.github.io/2021/04/13/webcrawler-1/</id>
     <published>2021-04-13T14:28:00.000Z</published>
-    <updated>2021-04-15T01:59:17.789Z</updated>
+    <updated>2021-04-15T02:23:57.217Z</updated>
     
     
     <summary type="html">&lt;p&gt;​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；&lt;/p&gt;</summary>
@@ -42,7 +42,7 @@
     <link href="http://junbofans.github.io/2021/04/13/webcrawler-0/"/>
     <id>http://junbofans.github.io/2021/04/13/webcrawler-0/</id>
     <published>2021-04-13T13:22:59.000Z</published>
-    <updated>2021-04-13T14:37:39.600Z</updated>
+    <updated>2021-04-15T02:29:22.021Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要介绍的内容为，技术学习路线，优秀教程等&lt;/p&gt;</summary>
