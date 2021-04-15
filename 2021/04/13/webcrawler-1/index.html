@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://docs.python-requests.org/zh_CN/latest/_static/requests-sidebar.png">
 <meta property="article:published_time" content="2021-04-13T14:28:00.000Z">
-<meta property="article:modified_time" content="2021-04-13T14:37:38.843Z">
+<meta property="article:modified_time" content="2021-04-15T01:59:17.789Z">
 <meta property="article:author" content="方尖碑">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="教程">
@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%BD%91%E9%A1%B5%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对网页发送请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">包装头文件</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%BD%91%E9%A1%B5%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">对网页发送请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">包装头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">3.</span> <span class="nav-text">定制请求头</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -241,10 +241,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-04-13 22:28:00 / 修改时间：22:37:38" itemprop="dateCreated datePublished" datetime="2021-04-13T22:28:00+08:00">2021-04-13</time>
+      <time title="创建时间：2021-04-13 22:28:00" itemprop="dateCreated datePublished" datetime="2021-04-13T22:28:00+08:00">2021-04-13</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-15 09:59:17" itemprop="dateModified" datetime="2021-04-15T09:59:17+08:00">2021-04-15</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -263,14 +269,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>959</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -284,10 +290,17 @@
         <p>​    这期是打算从豆瓣top250开始尝试，豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始，本项目的最终目的是将top250中的数据保存至db文件中，供日后数据分析和可视化使用；</p>
 <span id="more"></span>
 
-<p>​    这期是打算从豆瓣top250开始尝试，爬豆瓣top250高分电影，这类题目好像在网易游戏的题目中出现过，还是存在一些玩的必要性的，由于豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始；该项目基本思路跟随从0开始的爬虫【1】中，b站视频部分；</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br></pre></td></tr></table></figure>
+<p>​    这期是打算从豆瓣top250开始尝试，爬豆瓣top250高分电影，这类题目好像在网易游戏的题目中出现过，还是存在一些玩的必要性的，由于豆瓣属于静态网页，适合作为小白的练手项目，故从这个项目开始；本项目几乎完全来源于request的官方中文文档，详见：</p>
+<blockquote>
+<p>requests库官方中文文档</p>
+<p><a target="_blank" rel="noopener" href="https://docs.python-requests.org/zh_CN/latest/user/quickstart.html#id5">https://docs.python-requests.org/zh_CN/latest/user/quickstart.html#id5</a></p>
+</blockquote>
+<p>​    本文档打算以面向项目的实操记录的形式来进行的，因此本项目的基本目的是能够实现目的，即能够获取豆瓣top250的数据库，能运行即可，只有在遇到的时候才会考虑用法方面的问题，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
-<p>​    该部分代表整个程序的运行顺序，程序将从这个这行开始向下运行，用来简化阅读理解的流程；</p>
+<p>​    该部分代表整个程序的运行顺序，程序将从这个这行开始向下运行，用来简化阅读理解的流程；并在主函数下定义一个main（）方法；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    <span class="comment"># there is your code</span></span><br></pre></td></tr></table></figure>
+
 <p>​    从整个函数的运行逻辑上来看，爬虫的通用逻辑大致可以分为</p>
 <ol>
 <li>对网页发送请求，网站返回数据包（使用request等库）</li>
@@ -303,14 +316,22 @@
 <p><strong>警告</strong>：非专业使用其他 HTTP 库会导致危险的副作用，包括：安全缺陷症、冗余代码症、重新发明轮子症、啃文档症、抑郁、头疼、甚至死亡。</p>
 </blockquote>
 <p>​    在最初的项目中并不需要接触太深的request库的内容，将会根据项目，或者实操中遇到的问题回头介绍，先从每个爬虫流程的第一步，发送请求开始介绍吧；</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">baseurl = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line">r = requests.get(baseurl)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>得到的结果是：&lt;Response [418]&gt;，一个叫做418的返回对象，对象的类型是Response对象；</p>
 <p>【418】我是个茶壶，我煮不了咖啡，是你被豆瓣网识别出来是爬虫程序，被拦截了，需要做一定的更改；</p>
-<p>对于豆瓣的爬取策略，最简单的方式是封装一个header头文件，告诉豆瓣你是正常的浏览器</p>
+<p>对于豆瓣的爬取策略，最简单的方式是封装一个header头文件，告诉豆瓣你是正常的浏览器，将在下一小节，包装头文件中加以介绍；</p>
 </blockquote>
-<h2 id="包装头文件"><a href="#包装头文件" class="headerlink" title="包装头文件"></a>包装头文件</h2>
+<h2 id="包装头文件"><a href="#包装头文件" class="headerlink" title="包装头文件"></a>包装头文件</h2><blockquote>
+<h2 id="定制请求头"><a href="#定制请求头" class="headerlink" title="定制请求头"></a>定制请求头</h2><p>如果你想为请求添加 HTTP 头部，只要简单地传递一个 <code>dict</code> 给 <code>headers</code> 参数就可以了。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">baseurl = <span class="string">&quot;https://movie.douban.com/top250&quot;</span></span><br><span class="line"><span class="comment"># 豆瓣作为较为简单的反爬机制，设置的应该是之检查了user agent这一个参数，伪装该参数使用的格式见为</span></span><br><span class="line"><span class="comment"># headers = &#123;&quot;user-agent&quot;:&quot;....内容&quot;&#125;</span></span><br><span class="line">headers = &#123;<span class="string">&quot;user-agent&quot;</span>:<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.76&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 以上agent中的内容来源于浏览器，f12，刷新，header参数，user-agent部分；</span></span><br><span class="line">r = requests.get(baseurl,headers = headers)</span><br><span class="line"><span class="built_in">print</span>(r)</span><br><span class="line"><span class="built_in">print</span>(r.headers)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>此时得到的状态参数为&lt;200&gt;，该状态码的意思是成功处理了请求，伪装头文件之后，可以发现豆瓣不再拦截我们的访问请求，说自己是个茶壶了，对于我们得到的 &lt;class ‘requests.models.Response’&gt; 对象，我们下一步该做的就是响应其内容了；</p>
+</blockquote>
+
     </div>
 
     
@@ -380,13 +401,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
